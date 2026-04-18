@@ -1,0 +1,58 @@
+### Get all products (initially empty)
+GET http://localhost:8080/api/products
+
+###
+
+### Create a new product
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Laptop",
+  "description": "High-performance laptop",
+  "price": 1200.50
+}
+
+###
+
+### Create another product
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Smartphone",
+  "description": "Latest model smartphone",
+  "price": 799.99
+}
+
+###
+
+### Get all products (should have 2 now)
+GET http://localhost:8080/api/products
+
+###
+
+### Get product by ID (ID 1)
+GET http://localhost:8080/api/products/1
+
+###
+
+### Update product by ID (ID 1)
+PUT http://localhost:8080/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Gaming Laptop",
+  "description": "High-performance gaming laptop with RTX 4080",
+  "price": 2500.00
+}
+
+###
+
+### Delete product by ID (ID 2)
+DELETE http://localhost:8080/api/products/2
+
+###
+
+### Get all products (should only have the updated Laptop)
+GET http://localhost:8080/api/products
